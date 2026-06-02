@@ -1,7 +1,13 @@
-const allBtn = document.querySelectorAll(".btn")	
+let allBtn = document.querySelectorAll(".btn")	
 
-allBtn.forEach((allBtn,index)=> {
-allBtn.addEventListener('click',() =>{
-	console.log(allBtn.textContent);
+allBtn.forEach((Btn,index)=> {
+Btn.addEventListener('click',() =>{
+	console.log(Btn.textContent);
+
+let display = document.getElementById('display')
+
+let clickedValue = Btn.textContent;
+display.textContent = display.textContent + clickedValue;
+
 })
 })

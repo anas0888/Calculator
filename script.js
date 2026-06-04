@@ -36,19 +36,14 @@ return multiply(num1,num2)
 }
 else if(operation === '/'){
 return division(num1,num2)
-}
 };
-
+};
 
 
 
 allBtn.forEach((Btn,index)=> {
 Btn.addEventListener('click',() =>{
-	let value = Btn.textContent;
-	console.log(Btn.textContent)
-
-
-let clickedValue = Btn.textContent;
+	let value = Btn.textContent.trim();
 
 
 
@@ -71,10 +66,15 @@ num2 = Number(displayValue);
 	displayValue = result.toString();
 	
 }
+else if (value === "clear"){
+	 num1 = null;
+	 num2 = null;
+	 displayValue = "";
+         operation = null;
+	display.textContent = "";
 
 
-})
-})
+}
 
-
-
+});
+});
